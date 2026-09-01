@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brillarix Labs</title>
+
+  <style>/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #0f172a;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1769e0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #1769e0;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #f4f8ff;
+}
+
+
+.hero h1 {
+  font-size: 55px;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+
+.hero p {
+  font-size: 21px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+
+.primary-button {
+  background-color: #1769e0;
+  color: white;
+  border: none;
+  padding: 16px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+
+
+.primary-button:hover {
+  background-color: #1257bd;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+.services {
+  padding: 50px 60px;
+  text-align: center;
+}
+
+
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.service-card {
+  width: 300px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+
+
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background-color: #eaf2ff;
+  color: #1769e0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.service-card p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+
+.contact {
+  padding: 20px 20px 60px;
+  text-align: center;
+}
+
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1769e0;
+}
+
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+
+.send-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #1769e0;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.send-button:hover {
+  background-color: #1257bd;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .services {
+    padding: 40px 20px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+
+    max-width: 350px;
+  }
+}</style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <div class="logo">
+      BRILLARIX LABS
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <h1>Build Better Software.</h1>
+
+    <p id="heroText">
+      We turn ideas into powerful digital products.
+    </p>
+
+    <button class="primary-button" id="startButton">
+      Start a Project
+    </button>
+
+  </section>
+
+
+  <!-- SERVICES SECTION -->
+  <section class="services">
+
+    <h2>What We Build</h2>
+
+    <div class="cards-container">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+
+        <div class="icon">
+          #
+        </div>
+
+        <h3>Web Apps</h3>
+
+        <p>
+          Modern software
+        </p>
+
+      </div>
+
+
+      <!-- Card 2 -->
+      <div class="service-card">
+
+        <div class="icon">
+          AI
+        </div>
+
+        <h3>AI Products</h3>
+
+        <p>
+          Intelligent solutions
+        </p>
+
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="service-card">
+
+        <div class="icon">
+          *
+        </div>
+
+        <h3>Automation</h3>
+
+        <p>
+          Save time
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <form class="contact-form" id="contactForm">
+
+      <input
+        type="text"
+        placeholder="Name"
+        id="nameInput"
+      >
+
+      <input
+        type="email"
+        placeholder="Email"
+        id="emailInput"
+      >
+
+      <textarea
+        placeholder="Message"
+        id="messageInput"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="send-button"
+        >SEND
+      </button>
+          <p id="formMessage"></p>
+    </form>
+
+  </section>
+<script>const startButton = document.getElementById("startButton");
+const heroText = document.getElementById("heroText");
+
+startButton.addEventListener("click", function () {
+  heroText.textContent = "Your idea can become a real project."
+});
+const contactForm = document.getElementById("contactForm");
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const messageInput = document.getElementById("messageInput");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (nameInput.value === "" || emailInput.value === "" || messageInput.value === "" ) {
+    formMessage.textContent = "Please fill all the fields.";
+  } else {
+    formMessage.textContent = "Thank you! We will contact you soon."
+  }
+});</script>
+</body>
+
+</html>
